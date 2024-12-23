@@ -41,6 +41,16 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  /**
+   * Renders a customizable button component
+   * @param {Object} props - The component props
+   * @param {string} props.className - Additional CSS class names
+   * @param {string} props.variant - The button variant (e.g., 'primary', 'secondary')
+   * @param {string} props.size - The button size (e.g., 'small', 'medium', 'large')
+   * @param {boolean} [props.asChild=false] - Whether to render as a child component
+   * @param {React.Ref} ref - The ref to be forwarded to the button element
+   * @returns {React.Element} The rendered button component
+   */
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
