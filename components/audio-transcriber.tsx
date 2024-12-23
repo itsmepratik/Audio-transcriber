@@ -7,6 +7,18 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Loader2, Download, Mic } from "lucide-react"
 
+/**
+ * Audio transcriber component for uploading audio files and displaying transcriptions.
+ * This component provides a user interface for file upload, transcription processing,
+ * and downloading the resulting transcription.
+ *
+ * @returns {JSX.Element} A React component that renders the audio transcriber interface.
+ *
+ * @example
+ * <AudioTranscriber />
+ *
+ * @throws {Error} When the transcription process fails.
+ */
 export function AudioTranscriber() {
   const [file, setFile] = useState<File | null>(null)
   const [transcription, setTranscription] = useState<string>('')
