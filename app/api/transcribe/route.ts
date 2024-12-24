@@ -9,6 +9,12 @@ const openai = new OpenAI({
   baseURL: 'https://api.groq.com/openai/v1',
 });
 
+/**
+ * Handles POST requests for audio transcription.
+ * @param {NextRequest} request - The incoming HTTP request containing the audio file.
+ * @returns {Promise<NextResponse>} A JSON response with the transcription or an error message.
+ * @throws {Error} If there's an issue during file processing or transcription.
+ */
 export async function POST(request: NextRequest) {
   console.log('Transcription request received');
 
